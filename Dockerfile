@@ -3,7 +3,7 @@ FROM alpine:3.6
 LABEL repository="https://github.com/groupninemedia/notify"
 LABEL homepage="https://github.com/groupninemedia/notify"
 LABEL maintainer="GroupNineMedia <devops@groupninemedia.com>"
-LABEL "com.github.actions.name"="Filter Git Diff"
+LABEL "com.github.actions.name"="Nofity"
 LABEL "com.github.actions.description"="Action that sends notification messages."
 LABEL "com.github.actions.icon"="alert-octagon"
 LABEL "com.github.actions.color"="red"
