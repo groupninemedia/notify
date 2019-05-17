@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Post the comment.
+cat /github/workflow/event.json
+COMMENT="$@"
+PAYLOAD=$(echo '{}' | jq --arg text "$COMMENT" --arg color "$color" '.attachments = [{"text": $text, "color": $color}]')
+echo $PAYLOAD
+curl -S -H --header 'Content-Type: application/json' --data "$PAYLOAD" "$SLACK_WEBHOOK"
+
+exit 0
